@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css"
+      integrity="sha512-usVBAd66/NpVNfBge19gws2j6JZinnca12rAe2l+d+QkLU9fiG02O1X8Q6hepIpr/EYKZvKx/I9WsnujJuOmBA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>FontIcons</title>
+  </head>
+  <body>
+    <header>
+      <section id="title">
+        <div class="container h-100">
+          <div class="row h-100 align-items-center">
+            <div class="col">
+              <h1>FontIcons</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="filter-section">
+        <div class="container h-100">
+          <div class="row h-100 justify-content-center align-items-center">
+            <div class="col text-center">
+              <strong class="text-white">FILTRA PER TIPO</strong>
+              <select
+                id="type-filter"
+                class="form-select w-25 d-inline ms-3"
+              ></select>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main class="text-center py-4">
+      <section id="cards-section">
+        <div class="container">
+          <div class="row row-cols-md-5 row-cols-3 g-3"></div>
+        </div>
+      </section>
+    </main>
+    <script src="./js/data.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

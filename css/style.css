@@ -1,0 +1,35 @@
+#title {
+  height: 60px;
+}
+#filter-section {
+  background-color: #29b1dd;
+  height: 60px;
+}
+h1 {
+  color: #29b1dd;
+  margin: 0;
+}
+main {
+  height: calc(100vh - 120px);
+  background-color: #dddddd;
+  overflow: scroll;
+}
+.card {
+  height: 150px;
+  cursor: pointer;
+}
+.card:hover {
+  filter: brightness(0.8);
+}
+.animal {
+  color: #0000ff;
+}
+.vegetable {
+  color: #ffa500;
+}
+.user {
+  color: #800080;
+}
+.company {
+  color: #00800b;
+}
