@@ -1,4 +1,5 @@
-const filterElement = document.querySelector("#filter-section select");
+const typeFilter = document.querySelector("#filter-section select");
+const nameFilter = document.getElementById("name-filter");
 const cardsRow = document.querySelector("#cards-section .row");
 const capitalize = (str) => {
   var splitStr = str.toLowerCase().split(" ");
@@ -43,14 +44,24 @@ const getFilter = (cards, property) => {
 };
 
 renderCards(icons, cardsRow);
-filterElement.innerHTML = getFilter(icons, "type");
+typeFilter.innerHTML = getFilter(icons, "type");
 
-filterElement.addEventListener("change", () => {
-  if (filterElement.value == "all") {
+typeFilter.addEventListener("change", () => {
+  if (typeFilter.value == "all") {
     renderCards(icons, cardsRow);
   } else {
-    const filteredIcons = icons.filter(
-      (icon) => icon.type == filterElement.value
+    const filteredIcons = icons.filter((icon) => icon.type == typeFilter.value);
+    renderCards(filteredIcons, cardsRow);
+  }
+});
+
+nameFilter.addEventListener("input", () => {
+  typeFilter.value = "all";
+  if (nameFilter.value == "") {
+    renderCards(icons, cardsRow);
+  } else {
+    const filteredIcons = icons.filter((icon) =>
+      icon.name.toLowerCase().includes(nameFilter.value.toLowerCase())
     );
     renderCards(filteredIcons, cardsRow);
   }
